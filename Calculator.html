@@ -15,16 +15,17 @@
    
     
     <script>
-    var first= 0 ,second=0 ;
+    
     var result=document.getElementById("result");
     var add=document.getElementById("add-btn");
     var minus=document.getElementById("minus-btn");
     var times=document.getElementById("times-btn");
     var divide=document.getElementById("divide-btn");
+   
+   
     
-    
-    function get(){first = document.getElementById("first-number").value;
-      second = document.getElementById("second-number").value;};
+    function get(){first = Number(document.getElementById("first-number").value);
+      second = Number(document.getElementById("second-number").value)};
 
     add.onclick=function() { get();
     result.innerHTML = Number(first) + Number(second)};
@@ -35,10 +36,13 @@
     times.onclick=function() { get();
     result.innerHTML = Number(first) * Number(second)};
     
-    divide.onclick=function() { get();
-      
-        {result.innerHTML = Number(first) / Number(second)};
-        };
+     divide.onclick=function() { get();
+        if(second==0)
+	{
+	alert("Not Numeric");
+	}
+     else{result.innerHTML = Number(first) / Number(second)}
+     }
 
    
 
