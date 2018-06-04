@@ -58,7 +58,7 @@ function binbit()
 {var bin=Number(document.getElementById("bin-bit").value);
 var znmber=bin-num.length;
     if(num.length>bin)
- {alert("bin too short")}
+    {console.error("bin "+bin+" too short")}
  else
  {for(i=1;i<=znmber;i++)
         {num ="0"+num;
